@@ -1,0 +1,16 @@
+name: BastionMCCommands
+version: 1.0.0
+main: mc.bastion.commands.BastionMCCommands
+api-version: '1.21.11'
+softdepend: [LuckPerms]
+commands:
+  bcmd:
+    description: Administración de la lista blanca
+    permission: bastioncommands.admin
+permissions:
+  bastioncommands.admin:
+    default: op
+  bastioncommands.bypass:
+    default: op
+  bastioncommands.group.vip:
+    default: false

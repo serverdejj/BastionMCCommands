@@ -1,0 +1,118 @@
+# Los comandos sin * solo permiten la ruta exacta. Con * permiten también argumentos.
+# Las reglas deny prevalecen sobre todas las listas de grupos.
+# Los grupos se suman al default cuando el jugador tiene bastioncommands.group.<grupo>.
+# No se conceden permisos de otros plugins. Configúralos en LuckPerms.
+settings:
+  op-bypass: true
+  refresh-ticks: 40
+  block-namespaced: true
+  # Si un comando pertenece al servidor mediante un prefijo, normalmente se bloquea.
+  # No activar excepciones sin revisar sus permisos originales.
+  namespaced-exceptions: []
+deny:
+  - 'plugins *'
+  - 'pl *'
+  - 'version *'
+  - 'ver *'
+  - 'about *'
+  - '? *'
+  - 'help *'
+  - 'op *'
+  - 'deop *'
+  - 'lp *'
+  - 'luckperms *'
+  - 'bcmd *'
+  - 'ah admin *'
+  - 'ah reload *'
+  - 'clan admin *'
+  - 'clan reload *'
+  - 'prote give *'
+  - 'prote admin *'
+  - 'prote reload *'
+  - 'shop admin *'
+  - 'shop reload *'
+groups:
+  default:
+    commands:
+      - 'spawn *'
+      - 'rtp *'
+      - 'home *'
+      - 'sethome *'
+      - 'delhome *'
+      - 'homes *'
+      - 'tpa *'
+      - 'tpahere *'
+      - 'tpaccept *'
+      - 'tpdeny *'
+      - 'tpcancel *'
+      - 'msg *'
+      - 'r *'
+      - 'balance *'
+      - 'bal *'
+      - 'pay *'
+      - 'shop *'
+      - 'ah'
+      - 'ah sell *'
+      - 'ah search *'
+      - 'ah claim *'
+      - 'ah page *'
+      - 'ah selling *'
+      - 'ah expired *'
+      - 'ah purchased *'
+      - 'ah history *'
+      - 'ah option *'
+      - 'clan *'
+      - 'trade *'
+      - 'prote *'
+      - 'protecciones *'
+      - 'protes *'
+      - 'rankup *'
+      - 'warp *'
+      - 'warps *'
+      - 'kit *'
+      - 'kits *'
+      - 'cosmetics *'
+      - 'login *'
+      - 'register *'
+      - 'l *'
+      - 'reg *'
+      - 'pv *'
+      - 'mochila *'
+      - 'mochilas *'
+      - 'dungeons *'
+  vip:
+    commands:
+      - 'fly *'
+      - 'enderchest *'
+      - 'craft *'
+messages:
+  prefix: '&#F3CC25&lB&#F3D13B&lA&#F2D552&lS&#F2DA68&lT&#F1DE7F&lI&#F1E395&lO&#EFDF7A&lN &#EAD643&lM&#E7D227&lC &8» &r'
+  blocked: '&cNo puedes utilizar este comando.'
+  reloaded: '&aConfiguración recargada.'
+  invalid: '&cGrupo o ruta inválidos.'
+  saved: '&aCambios guardados.'
+  failed: '&cNo se pudieron guardar o cargar los cambios. Revisa la consola.'
+  player-only: '&cEste comando requiere un jugador.'
+  usage: '&e/bcmd menu [grupo] | add <grupo> <ruta> | remove <grupo> <ruta> | list <grupo> | reload'
+  groups: '&7Grupos: &f{groups}'
+  list: '&7{group}: &f{commands}'
+  no-permission: '&cNo tienes permiso.'
+gui:
+  group-title: '&8Grupos de comandos'
+  title: '&8Comandos: {group} ({page}/{pages})'
+  group-name: '&6{group}'
+  group-lore: ['&7Clic para editar']
+  command-name: '&e/{command}'
+  enabled: '&aPermitido (ruta completa)'
+  partial: '&ePermitido parcialmente'
+  disabled: '&cNo permitido en este grupo'
+  command-lore: ['{state}', '&7Clic: alternar ruta completa', '&7Respeta los bloqueos y permisos originales.']
+  previous: '&ePágina anterior'
+  next: '&ePágina siguiente'
+  back: '&eVolver a grupos'
+  materials:
+    group: CHEST
+    enabled: LIME_DYE
+    partial: YELLOW_DYE
+    disabled: GRAY_DYE
+    navigation: ARROW
